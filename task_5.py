@@ -34,7 +34,7 @@ def predict(x, weight, bias):
     return score_pred>=0.5
 
 def wrong_pred(y_pred, Y):
-    return np.sum(y_pred!=Y)
+    return np.mean(y_pred!=Y)
 
 data = helperFunction.readFile()
 X,Y = getXY(data)
@@ -67,3 +67,4 @@ for i in range(num_iteration):
     #weight, bias = updateParameter(learning_rate, Y_train, y_est, X_train, weight, bias)
 
 y_pred = predict(X_test, weight, bias)
+error = wrong_pred(y_pred, Y_test)

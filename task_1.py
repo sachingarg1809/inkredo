@@ -27,8 +27,8 @@ gr_a_avg_click = gr_a_click_count/day_count
 gr_b_avg_click = gr_b_click_count/day_count
 
 print("Numbner of days: " + str(day_count))
-print("Total click: " +str(total_daily_click))
+print("Total click through: " +str(total_daily_click/(search_a+search_b)))
 ##print(gr_a_click_count)
 ##print(gr_b_click_count)
-print("Average click per day by Group A: " + str(gr_a_avg_click))
-print("Average click per day by Group A: " + str(gr_b_avg_click))
+print("Click through by Group A: " + str(gr_a_avg_click/(search_a)))
+print("Click through by Group A: " + str(gr_b_avg_click/(search_b)))
